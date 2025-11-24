@@ -1,1 +1,3 @@
-# roudi-neovim
+# Configuração Neovim
+## Introdução
+Objetivo é baixar o neovim direto do repositório e deixar pronto para uso. Além da instalação e pré-setup, também configurar arquivos de syntax-highlight para arquivos de configuração de equipamentos de rede, como huawei, cisco, juniper, mikrotik ...
