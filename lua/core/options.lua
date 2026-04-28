@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 400
+vim.opt.confirm = true
 
 -- Indentação
 vim.opt.tabstop = 2
