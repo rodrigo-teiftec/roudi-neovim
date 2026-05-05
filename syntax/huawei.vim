@@ -20,7 +20,7 @@ highlight HuaweiComment ctermfg=33 cterm=bold guifg=#87cefa gui=bold
 " -----------------------------------------------------
 
 " Group: Green
-  syntax keyword HuaweiGreen enable active reauthorize green pass permit any online additive approve include contained
+syntax keyword HuaweiGreen enable active reauthorize green pass permit any online additive approve contained
 highlight HuaweiGreen ctermfg=2 guifg=#00ff00
 
 " -----------------------------------------------------
@@ -32,18 +32,18 @@ highlight HuaweiRed ctermfg=1 guifg=#ff0000
 " -----------------------------------------------------
 
 " Group: Yellow (Action)
-syntax match HuaweiYellow "\v(all|send|plain|(in|out)bound|delay|gt|le|ge|eq|and|or|then|in|auto|to|match)($|\s)" contained
-syntax match HuaweiYellow "\v(delegation|if-match|always|static|direct|delimiter|extend|none|check|retransmit|tracking|apply|rt|(end|else)?if)($|\s)" contained
+syntax match HuaweiYellow "\v(all|send|plain|(in|out)bound|delay|gt|le|ge|eq|and|or|then|in|auto|to)($|\s)" contained
+syntax match HuaweiYellow "\v(if-match|always|static|direct|none|check|retransmit|tracking|apply|rt|(end|else)?if)($|\s)" contained
 highlight HuaweiYellow ctermfg=3 guifg=#FFFF00
 
 " -----------------------------------------------------
 " Group: Blue (Command / Parameters)
-syntax match HuaweiBlue "\v\s\w+-\w+\s" contained
-syntax match HuaweiBlue "\v(number|prefix|authorization|connection|chasten|cipher|cost|med|hop-limit-exceeded|link-type|adjust-mss|address|expire-time|preference|area|interface|default-route-advertise|port-core-aggregation|accounting|authentication-mode|user-security-policy|(server|client)(-source)?|cpu-defend-policy|timeout|tcp-flag|source|option|name|destination(-port)?(-pool)?)\s" contained
-syntax match HuaweiBlue "\v(pool|bas|qos(-profile)?|source-interface|all-interface|as-path-list|web-auth-server|sys-info|source-ip|(local-)?user|route-policy|(ext)?community|next-hop(-local)?|link-local)" contained
-syntax match HuaweiBlue "\v(speed(-limit)?|duplex|learning|operator|traffic|classifier|license|sysname|timezone|minus|acl|export|channel|(log)?host|sampler|vlan|batch|router|id|version|template|car|cir|cbs|statistic|range|rule|advance)" contained
-syntax match HuaweiBlue "\v(attribute|translate|regular|weight|behavior|policy|precedence|statistics|level|state|interval|password|interim|mode|\strunk|portswitch|dot1q|identifier|sub(net)?|mtu|mru|keepalive|urpf|peer|group)" contained
-syntax match HuaweiBlue "\v(gateway|section|lease|network|import(-route)?|synchronization|unicast|timestamp(-reply)?|type|node|pwsignal|qinq|stacking|(pe-)?vid|l2|binding|vsi|community-(filter|list))" contained
+syntax match HuaweiBlue "\v\w+-\w+" contained
+syntax match HuaweiBlue "\v(connection|chasten|cipher|cost|med|hop-limit-exceeded|link-type|adjust-mss|address|expire-time|preference|area|interface|default-route-advertise|port-core-aggregation|accounting|authentication-mode|user-security-policy|(server|client)(-source)?|cpu-defend-policy|timeout|tcp-flag|source|option|name|destination(-port)?(-pool)?)\s" contained
+syntax match HuaweiBlue "\v(qos(-profile)?|source-interface|all-interface|as-path-list|web-auth-server|sys-info|source-ip|(local-)?user|route-policy|(ext)?community|next-hop(-local)?|link-local)" contained
+syntax match HuaweiBlue "\v(speed|duplex|learning|operator|traffic|classifier|license|sysname|timezone|minus|acl|export|host|sampler|vlan|batch|router|id|version|template|car|cir|cbs|statistic|range|rule|advance)" contained
+syntax match HuaweiBlue "\v(regular|behavior|policy|precedence|statistics|level|state|interval|password|interim|mode|\strunk|portswitch|dot1q|identifier|sub(net)?|mtu|mru|keepalive|urpf|peer|group)" contained
+syntax match HuaweiBlue "\v(network|import(-route)?|synchronization|unicast|type|node|pwsignal|qinq|stacking|(pe-)?vid|l2|binding|vsi|community-(filter|list))" contained
 highlight HuaweiBlue ctermfg=4 guifg=#3399ff
 
 " -----------------------------------------------------
@@ -56,8 +56,8 @@ highlight HuaweiOrange ctermfg=4 guifg=#FFA500
 
 " -----------------------------------------------------
 " Group: Pink (Services)
-syntax match HuaweiPink "\v(xpl|end-\w+|FTP|tcp|udp|terminal|ssh|snetconf|stelnet|netconf|icmp|telnet|any|snmp|arp|(t?ftp(-data)?)|md5|ipv6|ip|ospfv3|ospf|ppp|radius|lldp|ldp|clock|dhcp)($|\s)" contained
-syntax match HuaweiPink "\v(snmp-agent|radius-server|bgp|dns|domain|ntp|dhcpv6|ipoe|pppoe|sunrpc|smtp|chargen|www|netbios-(ns|ssn))$?\s?" contained
+syntax match HuaweiPink "\v(xpl|end-\w+|FTP|tcp|udp|terminal|ssh|snetconf|stelnet|netconf|icmp|telnet|any|snmp|arp|(t?ftp(-data)?)|md5|ipv6|ip|ospfv3|ospf|ppp|radius|lldp|ldp|clock|dhcp)" contained
+syntax match HuaweiPink "\v(snmp-agent|radius-server|bgp|dns|domain|ntp|dhcpv6|sunrpc|smtp|chargen|www|netbios-(ns|ssn))" contained
 syntax match HuaweiPink "netstream" contained
 highlight HuaweiPink ctermfg=13 guifg=#ff66cc
 
@@ -67,7 +67,8 @@ syntax match HuaweiOrangeWeak "\v\w+_\w+" contained
 highlight HuaweiOrangeWeak ctermfg=4 guifg=#f2cdb3
 
 " Group: Blue Conflict Syntax (Command / Parameters)
-syntax match HuaweiBlue2 "\v(layer2-subscriber|delegating-prefix-length|slaac-unshare-only|destination-port-pool|advertise-ext-community|port-core-aggregation|port-core-aggregation|default-route-advertise|shared-key-cipher)" contained
+syntax match HuaweiBlue2 "\v(destination-port-pool|advertise-ext-community|port-core-aggregation|port-core-aggregation|default-route-advertise)" contained
 highlight HuaweiBlue2 ctermfg=4 guifg=#3399ff
 
 let b:current_syntax = "huawei"
+
