@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>fh", function()
   require("telescope.builtin").help_tags()
 end)
 
+-- Copia e move o cursor para o final do bloco
+vim.keymap.set("v", "y", "y`]")
+
