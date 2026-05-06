@@ -39,3 +39,6 @@ end)
 -- Copia e move o cursor para o final do bloco
 vim.keymap.set("v", "y", "y`]")
 
+-- Exclui a quebra de linha quando copia com Y
+vim.keymap.set('n', 'Y', '0y$')
+
