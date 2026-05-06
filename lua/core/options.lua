@@ -22,3 +22,8 @@ vim.opt.smartcase = true
 -- Split
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- Ajustando separadores de palavra
+-- Melhora a seleção com duplo click
+vim.opt.iskeyword:append({"-", ".", ":", "/"})
+
