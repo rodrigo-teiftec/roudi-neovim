@@ -56,7 +56,7 @@ highlight HuaweiOrange ctermfg=4 guifg=#FFA500
 
 " -----------------------------------------------------
 " Group: Pink (Services)
-syntax match HuaweiPink "\v(xpl|end-\w+|FTP|tcp|udp|terminal|ssh|snetconf|stelnet|netconf|icmp|telnet|any|snmp|arp|(t?ftp(-data)?)|md5|ipv6|ip|ospfv3|ospf|ppp|radius|lldp|ldp|clock|dhcp)" contained
+syntax match HuaweiPink "\v(xpl|end-\w+|FTP|tcp|udp|terminal|ssh|snetconf|stelnet|netconf|icmp|telnet|any|snmp|arp|(t?ftp(-data)?)|md5|ipv6|ip|ospfv3|ospf|mpls|ppp|radius|lldp|ldp|clock|dhcp)" contained
 syntax match HuaweiPink "\v(snmp-agent|radius-server|bgp|dns|domain|ntp|dhcpv6|sunrpc|smtp|chargen|www|netbios-(ns|ssn))" contained
 syntax match HuaweiPink "netstream" contained
 highlight HuaweiPink ctermfg=13 guifg=#ff66cc
