@@ -42,3 +42,6 @@ vim.keymap.set("v", "y", "y`]")
 -- Exclui a quebra de linha quando copia com Y
 vim.keymap.set('n', 'Y', '0y$')
 
+-- Substituir a palavra sob o cursor em todo o arquivo
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+
